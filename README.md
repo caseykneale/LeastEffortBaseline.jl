@@ -1,9 +1,8 @@
 # LeastEffortBaseline.jl
 
-A baseline correction algorithm based on the concave rubber-band algorithm for spectral data processing. Instead of computing a convex hull on spectra a path of "least effort" is constructed where points in the spectrum (or vector) are chosen based on the 
-least distance from the current point. 
+A baseline correction algorithm based on the concave rubber-band algorithm for spectral data processing. Instead of computing a convex hull on spectra a path of "least effort" is constructed where points in the spectrum (or vector) are chosen based on the least distance from the current point. 
 
-In most cases I tested this on the result is identical to a rubber-band baseline correction using a convex hull. The main result is that the convex hull is expensive to compute and this is not. The implementation could be performance tuned further, but for the purposes I had for this, many years ago, this was beyond sufficient.
+In most cases I tested this on the result was identical to a rubber-band baseline correction using a convex hull. The main result is that the convex hull is expensive to compute and this is not. A nice side-effect of this is that the code has a really small foot-print sans some fumbling I did while prototyping this and the algorithm itself is both simple to read and implement. The implementation could be performance tuned further, but for my purposes at the time, this was sufficient enough. There is also a lot of opportunity for domain specific heuristics to improve performance and possibly results.
 
 ## Examples
 
@@ -39,4 +38,4 @@ Below is an example baseline correction of a sample region in the paracetamol sp
 
 ## Additional Notes
 
-I probably won't be updating this at any point. I was encouraged by a friend to share more of my personal research, especially the old stuff to benefit others. I no longer have work in this field, and although I have a lot more I could share, I don't have the bandwidth to finalize most of it at this time.
+I probably won't be updating this at any point. I was encouraged by a friend to share more of my personal research, especially the old stuff to benefit others. I do not currently work in this field, and although I have a lot more I could share, I don't have the bandwidth to finalize most of it at this time.

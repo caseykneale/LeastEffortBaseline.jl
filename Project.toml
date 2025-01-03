@@ -1,0 +1,4 @@
+name = "LeastEffortBaseline"
+uuid = "ed7a61b9-057e-49c1-98ca-3626ad8059a2"
+authors = ["Dr. Casey Kneale <ckneale@udel.edu>"]
+version = "0.1.0"

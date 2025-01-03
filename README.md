@@ -6,6 +6,27 @@ In most cases I tested this on the result was identical to a rubber-band baselin
 
 ## Examples
 
+### Example usage
+You probably shouldn't apply this technique to this dataset, but in the interest of getting some data to demonstrate how this works without much tinkering here's an example:
+
+```julia
+using LeastEffortBaseline
+using ChemometricsData, Plots
+
+# Load in a dataset
+PUFA_data = load("Raman_PUFA")
+
+# Convert some of the numeric fields into a Matrix rather then a DataFrame
+# this is kind of a hack, but you get the idea
+spectra = Float64.(Matrix(PUFA_data)[:, 6:end])
+plot(spectra', legend=false)
+
+# Apply the baseline correction
+baselines = baseline(spectra)
+baselined_spectra = spectra - baselines 
+plot(baselined_spectra', legend=false)
+```
+
 ### "Penicillin Fermentation Data"
 
 See [ChemometricsData.jl](https://github.com/caseykneale/ChemometricsData.jl) and the following citation for access to this dataset.
@@ -38,4 +59,4 @@ Below is an example baseline correction of a sample region in the paracetamol sp
 
 ## Additional Notes
 
-I probably won't be updating this at any point. I was encouraged by a friend to share more of my personal research, especially the old stuff to benefit others. I do not currently work in this field, and although I have a lot more I could share, I don't have the bandwidth to finalize most of it at this time.
+I was encouraged by a friend to share more of my older personal research to benefit others. I probably won't be updating this much due to bandwidth. I do not currently work in this field, and although I have lots more that I *could* share, I don't have the bandwidth to finalize most of it. Hopefully this helps someone.

@@ -36,7 +36,7 @@ Goldrick S., Duran-Villalobos C., K. Jankauskas, Lovett D., Farid S. S, Lennox B
 
 Using a low performance economy laptop, this approach was compared to a naive convex hull based implementation. The following performance characteristics were observed:
 
-| Algorithm      | Process Time (~1,130 spectra) | Heap Allocations | Gb Allocated |
+| Algorithm      | Process Time (~1,130 spectra) | Heap Allocations | GB Allocated |
 | ------------- | ------------- | --- | --- |
 | Convex Hull | 22.788s | 567,877,386 | 50.85 |
 | Least Effort | 0.3s | 326,012 | 0.9017 |
